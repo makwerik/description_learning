@@ -39,19 +39,19 @@ class Person:
         """
         Проверяем входные данные
         """
-        if type(name) != str:
+        if not isinstance(name, str):
             raise TypeError("Имя должно быть строкой")
         if name.isdigit():
             raise TypeError("В имени не могут присутствовать числа")
-        if type(old) != int:
+        if not isinstance(old, int):
             raise TypeError("Возраст должен быть целым числом")
-        if type(weight) != float:
+        if not isinstance(weight, float):
             raise TypeError("Вес должен быть вещественным числом")
 
 
 
 if __name__ == "__main__":
-    people = Person('Маквэрик', 23, 83.0)
+    people = Person('Макэгтош', 23, 83.0)
     print(people.old)
     hb = people.old = 24
     print('После 07.10.2023 мне уже будет:' + str(hb))
